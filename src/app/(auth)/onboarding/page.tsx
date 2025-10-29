@@ -31,7 +31,7 @@ export default async function OnboardingPage({
 
   return (
     <AnimatedCard>
-      <CardTitle className="text-title">Onboarding</CardTitle>
+      <CardTitle className="text-accent">Onboarding</CardTitle>
       <CardDescription className="text-muted">
         Email successfully verified
       </CardDescription>

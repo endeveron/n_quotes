@@ -15,7 +15,7 @@ const EMAIL_JWT = process.env.EMAIL_JWT as string;
 const NODEMAILER_USER = process.env.NODEMAILER_USER as string;
 const NODEMAILER_PASSWORD = process.env.NODEMAILER_PASSWORD as string;
 
-const APP_NAME = 'Gold Quotes';
+const APP_NAME = 'Golden Quotes';
 
 // Routes
 const SIGNIN_REDIRECT = '/signin';

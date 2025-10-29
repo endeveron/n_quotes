@@ -28,11 +28,11 @@ export default async function VerifyEmailPage({
 
   return (
     <AnimatedCard>
-      <CardTitle className="text-title">Check your inbox</CardTitle>
+      <CardTitle className="text-accent">Check your inbox</CardTitle>
       <CardContent>
         <p className="text-center">
           We&apos;ve sent a link to{' '}
-          <strong className="text-title">{email}</strong> Please follow the
+          <strong className="text-accent">{email}</strong> Please follow the
           instructions to complete your registration.
         </p>
         <p className="my-4 text-center text-sm text-muted">

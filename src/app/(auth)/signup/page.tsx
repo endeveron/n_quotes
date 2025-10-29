@@ -2,7 +2,6 @@ import { Metadata } from 'next';
 
 import { AnimatedCard, CardTitle } from '@/core/components/ui/Card';
 import { APP_NAME } from '@/core/constants';
-import CardLogo from '@/core/features/auth/components/CardLogo';
 import SignUpForm from '@/core/features/auth/components/SignupForm';
 
 export const metadata: Metadata = {
@@ -13,8 +12,8 @@ export const metadata: Metadata = {
 export default async function SignupPage() {
   return (
     <AnimatedCard>
-      <CardLogo />
-      <CardTitle className="text-title">Sign Up</CardTitle>
+      {/* <CardLogo /> */}
+      <CardTitle className="text-accent">Sign Up</CardTitle>
       <SignUpForm />
     </AnimatedCard>
   );

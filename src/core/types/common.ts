@@ -1,5 +1,3 @@
-import { ReactElement } from 'react';
-
 export type PageParams = Promise<{ slug: string }>;
 
 export type SearchParams = Promise<{
@@ -25,17 +23,6 @@ export type ServerActionResult<T = unknown> =
 export type APIResult<T> = {
   data: T | null;
   error?: string;
-};
-
-export type NavbarItem = {
-  id: string;
-  icon: ReactElement;
-  path?: string;
-};
-
-export type NavbarState = {
-  translation: Map<string, string> | null;
-  pathname: string;
 };
 
 export enum EmailType {

@@ -2,8 +2,9 @@
 
 import { signOut } from 'next-auth/react';
 import { useTheme } from 'next-themes';
-import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 
+import { EditIcon } from '@/core/components/icons/Edit';
 import { LightbulbIcon } from '@/core/components/icons/LightbulbIcon';
 import { MenuIcon } from '@/core/components/icons/MenuIcon';
 import { MoonIcon } from '@/core/components/icons/MoonIcon';
@@ -15,7 +16,6 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from '@/core/components/ui/DropdownMenu';
-import LoadingIcon from '@/core/components/ui/LoadingIcon';
 import { cn } from '@/core/utils';
 
 type MainMenuProps = {
@@ -27,8 +27,12 @@ type MainMenuProps = {
 };
 
 const MainMenu = ({ userData, className }: MainMenuProps) => {
+  const router = useRouter();
   const { setTheme, theme } = useTheme();
-  const [signoutPending, setSignoutPending] = useState(false);
+
+  const handleEditQuotes = () => {
+    router.push('/edit-quotes');
+  };
 
   const handleToggleTheme = () => {
     const newTheme = theme === 'light' ? 'dark' : 'light';
@@ -36,7 +40,6 @@ const MainMenu = ({ userData, className }: MainMenuProps) => {
   };
 
   const handleSignOut = () => {
-    setSignoutPending(true);
     signOut();
   };
 
@@ -49,11 +52,6 @@ const MainMenu = ({ userData, className }: MainMenuProps) => {
 
   return (
     <div className={cn('main-menu h-6', className)}>
-      {signoutPending && (
-        <div className="fixed z-40 inset-0 bg-background/90 flex flex-col items-center justify-center trans-c">
-          <LoadingIcon />
-        </div>
-      )}
       <DropdownMenu>
         <DropdownMenuTrigger>
           <MenuIcon className="icon--action" />
@@ -62,13 +60,20 @@ const MainMenu = ({ userData, className }: MainMenuProps) => {
           {userData && (
             <>
               <div className="cursor-default px-4 py-2">
-                <div className="text-lg font-bold">{userData.name}</div>
+                <div className="text-lg font-bold text-accent">
+                  {userData.name}
+                </div>
                 <div className="text-sm text-muted">{userData.email}</div>
               </div>
             </>
           )}
 
           <DropdownMenuSeparator />
+
+          <DropdownMenuItem onClick={handleEditQuotes}>
+            <EditIcon className="icon--menu" />
+            Edit quotes
+          </DropdownMenuItem>
 
           <DropdownMenuItem onClick={handleToggleTheme}>
             {themeIcon}

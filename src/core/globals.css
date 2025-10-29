@@ -16,8 +16,7 @@
   --inversed-background: hsl(var(--hue), 10%, 10%); /* main text */
   --inversed-foreground: hsl(var(--hue), 10%, 98%); /* body */
 
-  --accent: hsl(var(--accent-hue), 55%, 70%);
-  --accent-foreground: hsl(var(--hue), 10%, 100%);
+  --accent: hsl(var(--accent-hue), 55%, 65%);
 
   --btn-foreground: hsl(var(--hue), 10%, 100%);
   --btn-background: hsl(var(--accent-hue), 85%, 40%);
@@ -34,11 +33,11 @@
   --btn-accent-foreground-hover: hsl(0, 0%, 100%);
   --btn-accent-background-hover: hsl(var(--accent-hue), 55%, 70%);
 
-  --input: hsl(var(--hue), 10%, 97%);
-  --input-border: hsl(var(--hue), 10%, 92%);
-  --input-autofill: hsl(var(--hue), 3%, 25%);
+  --input: white;
+  --input-border: white;
+  --input-autofill: white;
 
-  --card: hsl(0, 0%, 100%);
+  --card: white;
 
   --popover: hsl(var(--hue), 10%, 100%); /* dropdown menu */
   --popover-foreground: hsl(var(--hue), 10%, 45%);
@@ -46,8 +45,6 @@
 
   --error: hsl(var(--error-hue), 85%, 50%);
 
-  --topbar: hsla(var(--hue), 10%, 100%);
-  --title: hsl(var(--accent-hue), 55%, 70%);
   --area: hsl(var(--hue), 10%, 95%); /* auth, sidebar */
   --muted: hsl(var(--hue), 3%, 60%);
   --border: hsl(var(--hue), 10%, 90%);
@@ -57,13 +54,14 @@
 }
 
 .dark {
-  --background: hsl(var(--hue), 3%, 15%);
+  /* --background: hsl(var(--hue), 3%, 15%); */
+  --background: hsl(var(--hue), 3%, 22%); /* body */
   --foreground: hsl(var(--hue), 20%, 95%);
 
   --inversed-background: hsl(var(--hue), 20%, 95%);
   --inversed-foreground: hsl(var(--hue), 20%, 5%);
 
-  --accent: hsl(var(--accent-hue), 55%, 75%);
+  --accent: hsl(var(--accent-hue), 55%, 80%);
 
   --btn-foreground: hsl(var(--hue), 20%, 100%);
   --btn-background: hsl(var(--accent-hue), 85%, 30%);
@@ -73,36 +71,35 @@
   --btn-secondary-foreground: hsl(var(--hue), 20%, 60%);
   --btn-secondary-background: hsl(var(--hue), 20%, 10%);
   --btn-secondary-foreground-hover: hsl(var(--hue), 20%, 5%);
-  --btn-secondary-background-hover: hsl(var(--accent-hue), 55%, 70%);
+  --btn-secondary-background-hover: hsl(var(--accent-hue), 75%, 85%);
 
   --btn-accent-foreground: hsl(var(--hue), 20%, 5%);
-  --btn-accent-background: hsl(var(--accent-hue), 45%, 65%);
+  --btn-accent-background: var(--accent);
   --btn-accent-foreground-hover: hsl(var(--hue), 20%, 5%);
-  --btn-accent-background-hover: hsl(var(--accent-hue), 55%, 70%);
+  --btn-accent-background-hover: hsl(var(--accent-hue), 75%, 85%);
 
   --input: hsl(var(--hue), 3%, 28%);
   --input-border: hsl(var(--hue), 3%, 28%);
   --input-autofill: hsl(var(--hue), 3%, 28%);
 
-  --card: hsl(var(--hue), 3%, 22%);
+  --card: hsl(var(--hue), 3%, 25%);
 
-  --popover-focus: hsl(var(--hue), 3%, 27%);
+  --popover-focus: hsl(var(--hue), 3%, 30%);
   --popover-foreground: hsl(var(--hue), 3%, 55%);
 
   --error: hsl(var(--error-hue), 85%, 60%);
 
-  --topbar: hsl(var(--hue), 20%, 20%);
-  --title: hsl(var(--accent-hue), 55%, 70%);
-  --area: hsl(var(--hue), 3%, 16%);
+  --area: hsl(var(--hue), 3%, 20%);
   --muted: hsl(var(--hue), 3%, 55%);
-  --border: hsl(var(--hue), 3%, 40%);
+  --border: hsl(var(--hue), 3%, 30%);
   --icon: hsl(var(--accent-hue), 40%, 75%);
-  --ring: hsl(var(--hue), 20%, 45%);
-  --scroll: hsl(var(--hue), 20%, 25%);
+  --ring: hsl(var(--hue), 3%, 30%);
+  --scroll: hsl(var(--hue), 3%, 30%);
 }
 
 @theme inline {
   --font-sans: var(--font-mulish-sans);
+  --font-pt: var(--font-pt-serif);
 
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -140,8 +137,6 @@
 
   --color-error: var(--error);
 
-  --color-topbar: var(--topbar);
-  --color-title: var(--title);
   --color-area: var(--area);
   --color-muted: var(--muted);
   --color-border: var(--border);
@@ -316,7 +311,7 @@
   }
 
   .icon--menu {
-    @apply text-icon/60;
+    @apply text-icon;
   }
 
   .icon--action {
@@ -347,6 +342,29 @@
 
   .form-control-with-icon input {
     @apply pr-9!;
+  }
+
+  /* Quotes */
+
+  .quote-form {
+    @apply relative w-full mx-auto max-w-150 flex flex-col gap-4 transition-opacity;
+  }
+
+  .quote-form_button {
+    @apply w-full sm:w-56 mt-1 mx-auto;
+  }
+
+  .quote-item {
+    @apply relative w-full max-w-[550px] flex flex-col p-4 text-sm font-semibold rounded-xl bg-card cursor-default shadow-xs;
+  }
+
+  .quote-item_toolbar {
+    @apply opacity-0 h-8 z-10 absolute top-2.5 right-2 bg-card rounded-xl;
+  }
+
+  .quote-item:hover .quote-item_toolbar,
+  .quote-item_toolbar[data-touch-device='true'] {
+    @apply opacity-100;
   }
 }
 

@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from 'next';
-import { Mulish } from 'next/font/google';
+import { Mulish, PT_Serif } from 'next/font/google';
 
 import { Providers } from '@/core/context/providers';
 import { Toaster } from '@/core/components/ui/Sonner';
@@ -14,18 +14,24 @@ export const viewport: Viewport = {
 
 const mulishSans = Mulish({
   variable: '--font-mulish-sans',
-  subsets: ['cyrillic', 'latin'],
+  subsets: ['latin'],
+});
+
+const ptSerif = PT_Serif({
+  weight: ['400', '700'],
+  variable: '--font-pt-serif',
+  subsets: ['latin'],
 });
 
 export const metadata: Metadata = {
   title: `${APP_NAME}`,
   applicationName: APP_NAME,
-  description: ``,
+  description: `Turn inspiration into action with Gold Quotes.`,
   creator: 'Endeveron',
   metadataBase: new URL(BASE_URL),
   openGraph: {
     title: `${APP_NAME}`,
-    description: ``,
+    description: `Turn inspiration into action with Gold Quotes.`,
     siteName: APP_NAME,
     type: 'website',
     url: '/',
@@ -59,7 +65,7 @@ export const metadata: Metadata = {
     'mobile-web-app-capable': 'yes',
     'apple-mobile-web-app-capable': 'yes',
     'apple-mobile-web-app-status-bar-style': 'default',
-    'apple-mobile-web-app-title': 'Games',
+    'apple-mobile-web-app-title': APP_NAME,
 
     // Pinterest
     'pinterest-rich-pin': 'true',
@@ -80,7 +86,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${mulishSans.variable} antialiased`}>
+      <body
+        className={`${mulishSans.variable} ${ptSerif.variable} antialiased`}
+      >
         <Providers>
           {children}
           <Toaster />
