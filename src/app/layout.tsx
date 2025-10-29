@@ -26,12 +26,12 @@ const ptSerif = PT_Serif({
 export const metadata: Metadata = {
   title: `${APP_NAME}`,
   applicationName: APP_NAME,
-  description: `Turn inspiration into action with Gold Quotes.`,
+  description: `Turn inspiration into action with Golden Quotes.`,
   creator: 'Endeveron',
   metadataBase: new URL(BASE_URL),
   openGraph: {
     title: `${APP_NAME}`,
-    description: `Turn inspiration into action with Gold Quotes.`,
+    description: `Turn inspiration into action with Golden Quotes.`,
     siteName: APP_NAME,
     type: 'website',
     url: '/',

@@ -3,14 +3,13 @@ import { APP_NAME } from '@/core/constants';
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: `${APP_NAME} – Text in Image`,
+    name: APP_NAME,
     short_name: APP_NAME,
-    description:
-      'A secure steganography app that lets you hide encrypted messages inside images.',
+    description: 'Turn inspiration into action with Golden Quotes.',
     start_url: '/',
     display: 'standalone',
-    background_color: '#07AFA5',
-    theme_color: '#07AFA5',
+    background_color: '#38363A',
+    theme_color: '#38363A',
     icons: [
       {
         src: '/images/icons/favicon.ico',

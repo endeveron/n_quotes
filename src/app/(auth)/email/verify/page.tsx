@@ -30,7 +30,7 @@ export default async function VerifyEmailPage({
     <AnimatedCard>
       <CardTitle className="text-accent">Check your inbox</CardTitle>
       <CardContent>
-        <p className="text-center">
+        <p className="text-center px-4">
           We&apos;ve sent a link to{' '}
           <strong className="text-accent">{email}</strong> Please follow the
           instructions to complete your registration.

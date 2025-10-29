@@ -26,7 +26,7 @@ const QuoteCard = ({
 
         {/* Translation */}
         {translation && (
-          <div className="mt-8 font-semibold md:text-lg lg:ml-6 lg:mt-12 lg:text-2xl">
+          <div className="mt-8 font-semibold md:text-lg lg:ml-6 lg:mt-12 lg:text-xl">
             {translation}
           </div>
         )}
