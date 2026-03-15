@@ -1,13 +1,9 @@
 import { Metadata } from 'next';
 
-import {
-  AnimatedCard,
-  CardContent,
-  CardTitle,
-} from '@/core/components/ui/Card';
-import { APP_NAME } from '@/core/constants';
-import GenerateTokenButton from '@/core/features/auth/components/GenerateTokenButton';
-import { SearchParams } from '@/core/types/common';
+import { AnimatedCard, CardContent, CardTitle } from '@/components/ui/Card';
+import { APP_NAME } from '@/constants';
+import GenerateTokenButton from '@/features/auth/components/GenerateTokenButton';
+import { SearchParams } from '@/types/common';
 
 export const metadata: Metadata = {
   title: `Verify Email – ${APP_NAME}`,

@@ -1,8 +1,8 @@
 import { redirect } from 'next/navigation';
 
-import MainMenu from '@/core/components/ui/MainMenu';
-import { SIGNIN_REDIRECT } from '@/core/constants';
-import QuotesClient from '@/core/features/quotes/components/QuotesClient';
+import MainMenu from '@/components/ui/MainMenu';
+import { SIGNIN_REDIRECT } from '@/constants';
+import QuotesClient from '@/features/quotes/components/QuotesClient';
 import { auth } from '~/auth';
 
 export default async function MainPage() {

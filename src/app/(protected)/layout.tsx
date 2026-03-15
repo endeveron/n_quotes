@@ -1,8 +1,8 @@
 import { redirect } from 'next/navigation';
 
-import { SIGNIN_REDIRECT } from '@/core/constants';
+import { SIGNIN_REDIRECT } from '@/constants';
 import { auth } from '~/auth';
-import { QuotesProvider } from '@/core/features/quotes/context/quotes';
+import { QuotesProvider } from '@/features/quotes/context/quotes';
 
 export default async function ProtectedLayout({
   children,

@@ -1,5 +1,5 @@
 import { MetadataRoute } from 'next';
-import { APP_NAME } from '@/core/constants';
+import { APP_NAME } from '@/constants';
 
 export default function manifest(): MetadataRoute.Manifest {
   return {

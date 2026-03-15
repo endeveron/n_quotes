@@ -1,11 +1,11 @@
 import NextAuth, { User } from 'next-auth';
 import Credentials from 'next-auth/providers/credentials';
 
-import { authorizeUser, signInSocial } from '@/core/features/auth/actions';
-import authConfig from '@/core/features/auth/config';
-import { signInSchema } from '@/core/features/auth/schemas';
-import { CustomToken, SocialProvider } from '@/core/features/auth/types';
-import { UserRole } from '@/core/types/user';
+import { authorizeUser, signInSocial } from '@/features/auth/actions';
+import authConfig from '@/features/auth/config';
+import { signInSchema } from '@/features/auth/schemas';
+import { CustomToken, SocialProvider } from '@/features/auth/types';
+import { UserRole } from '@/types/user';
 
 export const {
   handlers: { GET, POST },

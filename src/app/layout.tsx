@@ -1,11 +1,11 @@
 import type { Metadata, Viewport } from 'next';
 import { Mulish, PT_Serif } from 'next/font/google';
 
-import { Providers } from '@/core/context/providers';
-import { Toaster } from '@/core/components/ui/Sonner';
-import { APP_NAME, BASE_URL } from '@/core/constants';
+import { Providers } from '@/context/providers';
+import { Toaster } from '@/components/ui/Sonner';
+import { APP_NAME, BASE_URL } from '@/constants';
 
-import '@/core/globals.css';
+import '@/globals.css';
 
 export const viewport: Viewport = {
   interactiveWidget: 'resizes-content',

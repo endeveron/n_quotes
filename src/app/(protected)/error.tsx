@@ -1,6 +1,6 @@
 'use client';
 
-import ErrorDialog from '@/core/components/ui/ErrorDialog';
+import ErrorDialog from '@/components/ui/ErrorDialog';
 
 export default function Error({
   error,

@@ -1,15 +1,15 @@
 import { Metadata } from 'next';
 
-import { verifyUserId } from '@/core/features/auth/actions';
-import OnboardingForm from '@/core/features/auth/components/OnboardingForm';
+import { verifyUserId } from '@/features/auth/actions';
+import OnboardingForm from '@/features/auth/components/OnboardingForm';
 import {
   AnimatedCard,
   CardContent,
   CardDescription,
   CardTitle,
-} from '@/core/components/ui/Card';
-import { SearchParams } from '@/core/types/common';
-import { APP_NAME } from '@/core/constants';
+} from '@/components/ui/Card';
+import { SearchParams } from '@/types/common';
+import { APP_NAME } from '@/constants';
 
 export const metadata: Metadata = {
   title: `Onboarding – ${APP_NAME}`,

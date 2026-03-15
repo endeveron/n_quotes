@@ -1,15 +1,11 @@
 import { Metadata } from 'next';
 
-import {
-  AnimatedCard,
-  CardContent,
-  CardTitle,
-} from '@/core/components/ui/Card';
-import { APP_NAME } from '@/core/constants';
-import GenerateTokenButton from '@/core/features/auth/components/GenerateTokenButton';
-import { SearchParams } from '@/core/types/common';
-import { getErrorMessageFromSearchParams } from '@/core/utils/error';
-import { EMAIL_ERRORS } from '@/core/features/auth/constants';
+import { AnimatedCard, CardContent, CardTitle } from '@/components/ui/Card';
+import { APP_NAME } from '@/constants';
+import GenerateTokenButton from '@/features/auth/components/GenerateTokenButton';
+import { SearchParams } from '@/types/common';
+import { getErrorMessageFromSearchParams } from '@/utils/error';
+import { EMAIL_ERRORS } from '@/features/auth/constants';
 
 export const metadata: Metadata = {
   title: `Email error – ${APP_NAME}`,
@@ -31,7 +27,7 @@ export default async function EmailErrorPage({
 
   const errorMessage = getErrorMessageFromSearchParams(
     errCodeStr as string,
-    EMAIL_ERRORS
+    EMAIL_ERRORS,
   );
 
   return (

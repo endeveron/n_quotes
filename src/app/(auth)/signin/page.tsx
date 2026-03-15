@@ -1,8 +1,8 @@
 import { Metadata } from 'next';
 
-import { AnimatedCard, CardTitle } from '@/core/components/ui/Card';
-import { APP_NAME } from '@/core/constants';
-import SignInForm from '@/core/features/auth/components/SigninForm';
+import { AnimatedCard, CardTitle } from '@/components/ui/Card';
+import { APP_NAME } from '@/constants';
+import SignInForm from '@/features/auth/components/SigninForm';
 
 export const metadata: Metadata = {
   title: `Sign In – ${APP_NAME}`,
